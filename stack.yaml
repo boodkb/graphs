@@ -1,0 +1,11 @@
+resolver: lts-14.0
+
+flags: {}
+packages:
+- .
+
+extra-deps: []
+
+nix:
+  enable: true
+  packages: [ zlib, lzma, postgresql ]

@@ -1,0 +1,51 @@
+cabal-version: 1.12
+
+name:           graphs
+version:        0.0.0
+build-type:     Simple
+
+executable graphs
+  main-is: Main.hs
+  hs-source-dirs:
+      src
+  default-extensions:
+  other-modules:
+    Api
+    Api.Graph
+    Db
+    Db.Sessions
+    Db.Statements
+    Db.Transactions
+    Error
+    Server
+    Server.Graph
+
+  ghc-options:
+    -Wall
+    -Wcompat
+    -Wincomplete-record-updates
+    -Wincomplete-uni-patterns
+    -Wredundant-constraints
+    -Wnoncanonical-monad-instances
+    -threaded
+    -rtsopts
+    -fobject-code
+  build-depends:
+    base >=4.7 && <5,
+    text,
+    aeson,
+    hasql,
+    hasql-pool,
+    hasql-transaction,
+    servant,
+    servant-server,
+    servant-swagger,
+    servant-swagger-ui,
+    swagger2,
+    warp,
+    lens,
+    transformers,
+    mtl,
+    vector,
+    bytestring
+  default-language: Haskell2010
